@@ -1,11 +1,6 @@
-export interface Trainer {
-	id: number;
-	name: string;
-	createAt: Date;
-	updateAt: Date;
-}
-
-export interface safeTrainer {
-	id: number;
-	name: string;
+export default interface Trainer {
+	id: string;
+	name: string | null;
+	createdAt: Date;
+	updatedAt: Date;
 }

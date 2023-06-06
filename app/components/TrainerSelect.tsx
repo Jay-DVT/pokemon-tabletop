@@ -3,21 +3,13 @@
 import React from "react";
 import ClientOnly from "./ClientOnly";
 import CreateTrainer from "./CreateTrainer";
-import Trainer from "@/types";
+import Trainer from "@/app/types";
 
 interface trainerSelectProps {
 	trainers: Trainer[];
 }
 
 const TrainerSelect: React.FC<trainerSelectProps> = ({ trainers }) => {
-	if (!trainers) {
-		return (
-			<ClientOnly>
-				<CreateTrainer />
-			</ClientOnly>
-		);
-	}
-
 	return (
 		<div>
 			<h2>Trainer Select</h2>
