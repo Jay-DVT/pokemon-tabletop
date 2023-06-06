@@ -1,18 +1,12 @@
-"use client";
+import Trainer from "../types";
 
-import React from "react";
-import ClientOnly from "./ClientOnly";
-import CreateTrainer from "./CreateTrainer";
-import Trainer from "@/app/types";
-
-interface trainerSelectProps {
+interface trainerNavProps {
 	trainers: Trainer[];
 }
 
-const TrainerSelect: React.FC<trainerSelectProps> = ({ trainers }) => {
+const TrainerSelect: React.FC<trainerNavProps> = ({ trainers }) => {
 	return (
-		<div>
-			<h2>Trainer Select</h2>
+		<>
 			<select>
 				<option value=''>Select a trainer</option>
 				{trainers.map((trainer) => (
@@ -21,10 +15,7 @@ const TrainerSelect: React.FC<trainerSelectProps> = ({ trainers }) => {
 					</option>
 				))}
 			</select>
-			<ClientOnly>
-				<CreateTrainer />
-			</ClientOnly>
-		</div>
+		</>
 	);
 };
 
